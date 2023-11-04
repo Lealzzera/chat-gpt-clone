@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import IconClose from "./icons/IconClose";
 import IconAdd from "./icons/IconAdd";
 import { SidebarButton } from "./SidebarButton";
@@ -19,10 +19,21 @@ export const Sidebar = ({
 	onClear,
 	addNewChat,
 }: SideBarProps) => {
+	const outSidebar = useRef<HTMLDivElement>(null);
+
+	const handleClickOutside = ({ target }: any) => {
+		if (!outSidebar.current) return;
+		if (target === outSidebar.current.children[0]) {
+			onCloseSidebar();
+		}
+	};
+
 	return (
 		<section
+			onClick={handleClickOutside}
 			className={`fixed left-0 top-0 bottom-0 text-white
 			${openSideBar ? "w-screen bg-gray-600/75" : "w-0"} md:w-64 md:static`}
+			ref={outSidebar}
 		>
 			<div
 				className={`transition-all duration-200 flex h-screen ${
