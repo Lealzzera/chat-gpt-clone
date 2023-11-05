@@ -1,6 +1,10 @@
 import { ChatCard } from "./ChatCard";
 
 export const ChatPlaceholder = () => {
+	const handleGetCardProperties = (event: any) => {
+		console.log(event);
+	};
+
 	return (
 		<div className='h-full flex flex-col justify-between'>
 			<div className='flex items-center justify-center'>
@@ -12,12 +16,28 @@ export const ChatPlaceholder = () => {
 			</h3>
 			<div className='flex justify-center items-center m-auto gap-2 w-full'>
 				<div className='hidden md:block w-96'>
-					<ChatCard title='Tell me a fun fact' body='about the Roman Empire' />
-					<ChatCard title='Tell me a fun fact' body='about the Roman Empire' />
+					<ChatCard
+						onCardClick={() => handleGetCardProperties(event)}
+						title='Tell me a fun fact'
+						body='about the Roman Empire'
+					/>
+					<ChatCard
+						onCardClick={() => handleGetCardProperties(event)}
+						title='Tell me a fun fact'
+						body='about the Roman Empire'
+					/>
 				</div>
 				<div className='w-96 mx-5'>
-					<ChatCard title='Tell me a fun fact' body='about the Roman Empire' />
-					<ChatCard title='Tell me a fun fact' body='about the Roman Empire' />
+					<ChatCard
+						onCardClick={() => handleGetCardProperties(event)}
+						title='Tell me a fun fact'
+						body='about the Roman Empire'
+					/>
+					<ChatCard
+						onCardClick={() => handleGetCardProperties(event)}
+						title='Tell me a fun fact'
+						body='about the Roman Empire'
+					/>
 				</div>
 			</div>
 		</div>
