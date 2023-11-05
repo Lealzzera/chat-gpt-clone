@@ -8,7 +8,7 @@ export const ChatMessageLoading = () => {
 					<IconRobot width={24} height={24} />
 				</div>
 				<div className='flex-1 text-base whitespace-pre-wrap'>
-					<div className='w-4 h-4 rounded rounded-xl bg-slate-300 animate-blink'></div>
+					<div className='w-4 h-4 rounded-xl bg-slate-300 animate-blink'></div>
 				</div>
 			</div>
 		</div>

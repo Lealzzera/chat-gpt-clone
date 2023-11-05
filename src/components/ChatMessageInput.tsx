@@ -39,13 +39,13 @@ export const ChatMessageInput = ({
 
 	return (
 		<div
-			className={`flex border border-gray-800/50 bg-gpt-light-gray p-2 rounded-xl ${
+			className={`flex mx-2 border border-gray-800/50 bg-gpt-light-gray p-2 rounded-xl ${
 				disabled && "opacity-50"
 			}`}
 		>
 			<textarea
 				ref={textElement}
-				className='flex-1 w-full border-0 bg-transparent resize-none outline-none h-6 max-h-48 overflow-y-auto'
+				className='flex-1  w-full border-0 bg-transparent resize-none outline-none h-6 max-h-48 overflow-y-auto'
 				placeholder='Digite uma mensagem'
 				value={text}
 				onChange={({ target }) => setText(target.value)}
